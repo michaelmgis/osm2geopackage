@@ -30,7 +30,7 @@ mkdir /home/osmdata/impcache/
 cd /home/osmdata/pbf
 wget https://github.com/omniscale/imposm3/releases/download/v0.10.0/imposm-0.10.0-linux-x86-64.tar.gz
 tar -xf imposm-0.10.0-linux-x86-64.tar.gz
-mv imposm-0.10.0-linux-x86-64.tar.gz/* /home/osmdata/pbf/
+mv imposm-0.10.0-linux-x86-64/* /home/osmdata/pbf/
 
 #Download the preconfigured mapping.yml
 cd /home/osmdata/pbf
