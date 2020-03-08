@@ -26,7 +26,7 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 - osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql (used in former [workflows](https://github.com/michaelmgis/osmdata.xyz/tree/master/archive))
 
 ## Data basis
-- primary (map) features? --> https://wiki.openstreetmap.org/wiki/Map_Features
+- primary (map) features --> https://wiki.openstreetmap.org/wiki/Map_Features
 - planet file as osm.pbf --> https://planet.openstreetmap.org/
 
 ## Recent improvements and changes
