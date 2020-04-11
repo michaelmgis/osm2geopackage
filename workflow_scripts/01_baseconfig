@@ -11,6 +11,7 @@ sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'YOURPASSWORD';"
 #Creating a user in Postgre and setup a database
 sudo -u postgres psql -c "CREATE USER osmdata WITH LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1;"
 sudo -u postgres psql -c "CREATE DATABASE osmdatabase WITH OWNER = osmdata ENCODING = 'UTF8' CONNECTION LIMIT = -1;"
+sudo -u postgres psql -c "ALTER USER osmdata WITH PASSWORD 'YOURPASSWORD';"
 
 #Setup PostGIS extention and imposm schema
 sudo -u postgres psql -d osmdatabase -c "CREATE EXTENSION postgis;"
