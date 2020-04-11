@@ -31,6 +31,9 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 
 ## Recent improvements and changes
 
+- 04.4040
+  - Adressing [Issue 18](https://github.com/michaelmgis/osmdata.xyz/issues/18) for more compatibility
+  - colon (:) to underline in attribute names and renaming "natural" to "natural_attribute".
 - 01.2020
   - [docker workflow](https://github.com/michaelmgis/osmdata.xyz/tree/master/docker)
 - 10.2019
