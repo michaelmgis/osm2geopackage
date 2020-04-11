@@ -1,3 +1,10 @@
+#This script imports each osm.pbf file into a postgis database and creates extracts. Afterwards, the tables are dropped.
+#Each iterative process replaces colon (:) by underline (_) and the reserved keyword "natural by "natural_attribute". [See issue 18](https://github.com/michaelmgis/osmdata.xyz/issues/18)
+#Don't forget to set the passwords for the database user
+#Run this script as osmdata user
+# mapping.yml file is provided
+
+
 cd /home/osmdata/pbf/
 ./imposm import -mapping mapping.yml -cachedir /home/osmdata/impcache -overwritecache -srid 4326 -write -connection postgis://osmdata:*PASSWORD*@localhost/osmdatabase -read planet-latest_natural.osm.pbf
 psql -d osmdatabase -c 'ALTER TABLE import.osm_point RENAME COLUMN "aerialway:capacity" TO aerialway_capacity;'
