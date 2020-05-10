@@ -6,8 +6,6 @@ This project provides global data extracts based on [OpenStreetMap data](https:/
 ## Extracts are available on
 https://download.osmdata.xyz/
 
-Unpacking the 7zip-archives with 7zip ([GNU LGPL license](https://de.wikipedia.org/wiki/GNU_Lesser_General_Public_License)), which is available for Windows and Linux: https://www.7-zip.org/download.html.
-
 In a monthly cycle new extracts are provided. The first Planet Dump of each month from openstreetmap.org will be available 10 days later as it takes a while for the data to be processed. Every odd month, Buildings and Highways will be updated.
 
 Projection of the geodata: WGS 84 | EPSG 4326 | https://spatialreference.org/ref/epsg/4326/
@@ -33,10 +31,12 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 
 ## Recent improvements and changes
 
-- 04.4040
+- 05.2020
+  - Providing ZIP-Files as Downloads. Switching back from 7zip to ZIP for better compatibility and usability.
+- 04.2020
   - Adressing [Issue 18](https://github.com/michaelmgis/osmdata.xyz/issues/18) for more compatibility
   - colon (:) to underline in attribute names and renaming "natural" to "natural_attribute".
-  - Adressing [Issue 19](https://github.com/michaelmgis/osmdata.xyz/issues/19) by swithing to [7zip-archive](https://www.7-zip.org/download.html) format.
+  - ~~ Adressing [Issue 19](https://github.com/michaelmgis/osmdata.xyz/issues/19) by swithing to [7zip-archive](https://www.7-zip.org/download.html) format. ~~
 - 01.2020
   - [docker workflow](https://github.com/michaelmgis/osmdata.xyz/tree/master/docker)
 - 10.2019
