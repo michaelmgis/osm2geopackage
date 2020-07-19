@@ -1,5 +1,5 @@
 #installation of needed packages | please check the version of postgres and postgis you would like to use.
-apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano wget axel wput screen p7zip-full osmium-tool htop vnstat gdal-bin postgresql-10-postgis-2.4 postgresql-10-postgis-2.4-scripts
+apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano wget axel wput screen p7zip-full osmium-tool htop vnstat gdal-bin postgresql-12-postgis-3 postgresql-12-postgis-3-scripts
 
 #add user 'osmdata' for all processes
 adduser osmdata
