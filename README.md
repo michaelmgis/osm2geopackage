@@ -32,7 +32,7 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 ## Recent improvements and changes
 
 - 10.2020
-  - adding osm_id as key [Issue 21](https://github.com/michaelmgis/osmdata.xyz/issues/21)
+  - adding osm_id as key [Issue 21](https://github.com/michaelmgis/osmdata.xyz/issues/21); more information at [imposm docs](https://imposm.org/docs/imposm3/latest/mapping.html#id)
 - 05.2020
   - Providing ZIP-Files as Downloads. Switching back from 7zip to ZIP for better compatibility and usability.
 - 04.2020
