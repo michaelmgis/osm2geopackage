@@ -482,6 +482,9 @@ tables:
     - key: wifi
       name: wifi
       type: string
+    - key: timestamp
+      name: timestamp
+      type: string
     - key: osm_id
       name: osm_id
       type: id
@@ -517,6 +520,7 @@ tables:
        telecom: [__any__]
        internet_access: [__any__]
        wifi: [__any__]
+       timestamp: [__any__]
        osm_id: [__any__]
   linestring:
     load_all: true
@@ -1001,6 +1005,9 @@ tables:
     - key: wifi
       name: wifi
       type: string
+    - key: timestamp
+      name: timestamp
+      type: string
     - key: osm_id
       name: osm_id
       type: id
@@ -1036,6 +1043,7 @@ tables:
        telecom: [__any__]
        internet_access: [__any__]
        wifi: [__any__]
+       timestamp: [__any__]
        osm_id: [__any__]
   polygon:
     load_all: true
@@ -1520,6 +1528,9 @@ tables:
     - key: wifi
       name: wifi
       type: string
+    - key: timestamp
+      name: timestamp
+      type: string
     - key: osm_id
       name: osm_id
       type: id
@@ -1555,4 +1566,5 @@ tables:
        telecom: [__any__]
        internet_access: [__any__]
        wifi: [__any__]
+       timestamp: [__any__]
        osm_id: [__any__]
