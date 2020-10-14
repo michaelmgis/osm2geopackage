@@ -484,7 +484,10 @@ tables:
       type: string
     - key: timestamp
       name: timestamp
-      type: string
+      type: timestamp
+    - key: osm_id
+      name: osm_id
+      type: id
     mapping:
        building: [__any__]
        highway: [__any__]
@@ -518,6 +521,7 @@ tables:
        internet_access: [__any__]
        wifi: [__any__]
        timestamp: [__any__]
+       osm_id: [__any__]
   linestring:
     load_all: true
     type: linestring
@@ -1003,7 +1007,10 @@ tables:
       type: string
     - key: timestamp
       name: timestamp
-      type: string
+      type: timestamp
+    - key: osm_id
+      name: osm_id
+      type: id
     mapping:
        building: [__any__]
        highway: [__any__]
@@ -1037,6 +1044,7 @@ tables:
        internet_access: [__any__]
        wifi: [__any__]
        timestamp: [__any__]
+       osm_id: [__any__]
   polygon:
     load_all: true
     type: polygon
@@ -1522,7 +1530,10 @@ tables:
       type: string
     - key: timestamp
       name: timestamp
-      type: string
+      type: timestamp
+    - key: osm_id
+      name: osm_id
+      type: id
     mapping:
        building: [__any__]
        highway: [__any__]
@@ -1556,3 +1567,4 @@ tables:
        internet_access: [__any__]
        wifi: [__any__]
        timestamp: [__any__]
+       osm_id: [__any__]
