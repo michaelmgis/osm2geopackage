@@ -1,0 +1,45 @@
+The actual workflow using imposm isn't recognizing relations. Since relations are cruicial for the correct extraction of e.g. route related to public_transport, another workflow is needed.
+
+The following keys and tags are selected to extract public_transport features:
+
+#bus stops
+highway=bus_stop, public_transport=platform, bus=yes, public_transport=platform, highway=bus_stop
+
+#bus/public transport stations
+amenity=bus_station, public_transport=station, bus=yes, public_transport=station
+
+#Bus routes
+type=route, route=bus, route=trolleybus
+
+#Route master relations
+type=route_master, route_master=bus, route_master=trolleybus, operator=*, network=*
+
+#Bus lanes and tracks
+busway=*, lanes:psv=*, bus:lanes=*, bus_bay=*
+
+#bus stop, relation
+ref=*, local_ref=*, operator=*. shelter=*, covered=*, uic_ref=*, uic_name=*, departures_board=*, bench=*, bin=*, tactile_paving=*, layer=*, lit=*, surface=*, wheelchair=*, bicycle=*, official_name=*, public_transport:version=*, operator=*, opening_hours=*, interval=*, duration=*, fee=*, from=*, to=*, via=*, colour=*, roundtrip=*, internet_access=*, air_conditioning=*
+
+#Railways
+railway=*, electrified=*, usage=*, service=*, gauge=*, bridge=*, tunnel=*, layer=*, operator=*, embankment=*, cutting=*, passenger=*, 
+
+#Ferry
+amenity=ferry_terminal
+
+#routes
+#public_transport
+route=bus, route=trolleybus, route=minibus, route=share_taxi, route=train, route=light_rail, route=subway, route=tram, route=monorail, route=ferry
+
+#Tools
+gdal/ogr2ogr
+
+##Step 1 - load data from PBF file to GeoPackage as interim vehicle.
+Hint: ready-to-use osmconf_ptr.ini can be found here.
+
+ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg planet-latest.osm.pbf
+
+##Step 2 - filter only relevant keys and tags, export the results into a final GeoPackage.
+ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_point -nlt POINT public_transport_withrelations_EPSG4326.gpkg -sql "select * from points WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
+ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_line -nlt LINESTRING -update public_transport_withrelations_EPSG4326.gpkg -sql "select * from lines WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
+ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_multilinestrings -nlt MULTILINESTRING -update public_transport_withrelations_EPSG4326.gpkg -sql "select * from multilinestrings WHERE type = 'route' AND route='bus' OR route='ferry' OR route='light_rail' OR route='minibus' OR route='monorail' OR route='share_taxi' OR route='subway' OR route='train' OR route='tram' OR route='trolleybus' OR route_master='bus' OR route_master='trolleybus'"
+ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_multipolygons -nlt MULTIPOLYGON -update public_transport_withrelations_berlin_EPSG4326.gpkg -sql "select * from multipolygons WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
