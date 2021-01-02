@@ -31,6 +31,9 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 
 ## Recent improvements and changes
 
+- 01.2021
+  - adressing [Issue #23](https://github.com/michaelmgis/osmdata.xyz/issues/23)
+  - adding a new extract to the [workflow](https://github.com/michaelmgis/osmdata.xyz/blob/master/workflow_scripts/99_public_transport_with_relations)  [public_transport_with_relations_EPSG4326.zip](https://download.osmdata.xyz/data/public_transport_with_relations_EPSG4326.zip)
 - 10.2020
   - adding osm_id as key [Issue 21](https://github.com/michaelmgis/osmdata.xyz/issues/21); more information at [imposm docs](https://imposm.org/docs/imposm3/latest/mapping.html#id)
 - 05.2020
