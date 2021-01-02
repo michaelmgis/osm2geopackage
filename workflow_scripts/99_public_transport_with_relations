@@ -34,7 +34,7 @@ route=bus, route=trolleybus, route=minibus, route=share_taxi, route=train, route
 gdal/ogr2ogr
 
 ##Step 1 - load data from PBF file to GeoPackage as interim vehicle.
-Hint: ready-to-use osmconf_ptr.ini can be found here[https://github.com/michaelmgis/osmdata.xyz/blob/master/workflow_scripts/osmconf_ptr.ini].
+Hint: ready-to-use osmconf_ptr.ini can be found [here](https://github.com/michaelmgis/osmdata.xyz/blob/master/workflow_scripts/osmconf_ptr.ini).
 
 ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg planet-latest.osm.pbf
 
