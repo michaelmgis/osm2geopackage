@@ -33,13 +33,10 @@ route=bus, route=trolleybus, route=minibus, route=share_taxi, route=train, route
 #Tools
 gdal/ogr2ogr
 
-##Step 1 - load data from PBF file to GeoPackage as interim vehicle.
+##Steps - load data from PBF file to GeoPackage while filter only relevant keys and tags.
 Hint: ready-to-use osmconf_ptr.ini can be found here: https://github.com/michaelmgis/osmdata.xyz/blob/master/workflow_scripts/osmconf_ptr.ini.
 
-ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg planet-latest.osm.pbf
-
-##Step 2 - filter only relevant keys and tags, export the results into a final GeoPackage.
-ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_point -nlt POINT public_transport_withrelations_EPSG4326.gpkg -sql "select * from points WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
-ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_line -nlt LINESTRING -update public_transport_withrelations_EPSG4326.gpkg -sql "select * from lines WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
-ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_multilinestrings -nlt MULTILINESTRING -update public_transport_withrelations_EPSG4326.gpkg -sql "select * from multilinestrings WHERE type = 'route' AND route='bus' OR route='ferry' OR route='light_rail' OR route='minibus' OR route='monorail' OR route='share_taxi' OR route='subway' OR route='train' OR route='tram' OR route='trolleybus' OR route_master='bus' OR route_master='trolleybus'"
-ogr2ogr -f "GPKG" ptr_filter_EPSG4326.gpkg -nln ptr_multipolygons -nlt MULTIPOLYGON -update public_transport_withrelations_berlin_EPSG4326.gpkg -sql "select * from multipolygons WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
+ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg -nln ptr_point -nlt POINT planet-latest.osm.pbf -sql "select * from points WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
+ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg -nln ptr_line -nlt LINESTRING -update planet-latest.osm.pbf -sql "select * from lines WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
+ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg -nln ptr_multilinestrings -nlt MULTILINESTRING -update planet-latest.osm.pbf -sql "select * from multilinestrings WHERE type = 'route' AND route='bus' OR route='ferry' OR route='light_rail' OR route='minibus' OR route='monorail' OR route='share_taxi' OR route='subway' OR route='train' OR route='tram' OR route='trolleybus' OR route_master='bus' OR route_master='trolleybus'"
+ogr2ogr -f "GPKG" -oo CONFIG_FILE=osmconf_ptr.ini -oo MAX_TMPFILE_SIZE=20000 public_transport_withrelations_EPSG4326.gpkg -nln ptr_multipolygons -nlt MULTIPOLYGON -update planet-latest.osm.pbf -sql "select * from multipolygons WHERE highway='bus_stop' OR public_transport='platform' OR public_transport='station' OR bus='yes' OR amenity='bus_station' OR amenity='ferry_terminal' OR railway IS NOT NULL"
