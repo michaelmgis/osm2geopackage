@@ -6,7 +6,7 @@ This project provides global data extracts based on [OpenStreetMap data](https:/
 ## Extracts are available on
 https://download.osmdata.xyz/
 
-In a monthly cycle new extracts are provided. The first Planet Dump of each month from openstreetmap.org will be available 10 days later as it takes a while for the data to be processed. Every odd month, Buildings and Highways will be updated.
+In a monthly cycle new extracts are provided. The first Planet Dump of each month from openstreetmap.org will be available 10 days later as it takes a while for the data to be processed. Every odd month, Buildings will be updated.
 
 Projection of the geodata: WGS 84 | EPSG 4326 | https://spatialreference.org/ref/epsg/4326/
 
