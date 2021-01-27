@@ -482,6 +482,9 @@ tables:
     - key: wifi
       name: wifi
       type: string
+    - key: tents
+      name: tents
+      type: string
     - key: timestamp
       name: timestamp
       type: string
@@ -520,6 +523,7 @@ tables:
        telecom: [__any__]
        internet_access: [__any__]
        wifi: [__any__]
+       tents: [_any_]
        timestamp: [__any__]
        osm_id: [__any__]
   linestring:
@@ -1005,6 +1009,9 @@ tables:
     - key: wifi
       name: wifi
       type: string
+    - key: tents
+      name: tents
+      type: string
     - key: timestamp
       name: timestamp
       type: string
@@ -1043,6 +1050,7 @@ tables:
        telecom: [__any__]
        internet_access: [__any__]
        wifi: [__any__]
+       tents: [_any_]
        timestamp: [__any__]
        osm_id: [__any__]
   polygon:
@@ -1528,6 +1536,9 @@ tables:
     - key: wifi
       name: wifi
       type: string
+    - key: tents
+      name: tents
+      type: string
     - key: timestamp
       name: timestamp
       type: string
@@ -1566,5 +1577,6 @@ tables:
        telecom: [__any__]
        internet_access: [__any__]
        wifi: [__any__]
+       tents: [_any_]
        timestamp: [__any__]
        osm_id: [__any__]
