@@ -31,7 +31,7 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 
 ## Recent improvements and changes
 
--02.2021
+- 02.2021
   - adressing [Issue #16](https://github.com/michaelmgis/osmdata.xyz/issues/16) --> adding tents
 - 01.2021
   - adressing [Issue #23](https://github.com/michaelmgis/osmdata.xyz/issues/23)
