@@ -32,7 +32,7 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 ## Recent improvements and changes
 
 - 03.2021
-  - BIG UPDATE  will be implemented in March - adressing [Issue #25](https://github.com/michaelmgis/osmdata.xyz/issues/25): Switching to gdal/ogr2ogr for processing only. Data model stays the same.
+  - BIG UPDATE  will be implemented in March - adressing [Issue #25](https://github.com/michaelmgis/osmdata.xyz/issues/25): Switching from imposm/PostgreSQL to gdal/ogr2ogr for processing. Data model stays the same.
 - 02.2021
   - adressing [Issue #16](https://github.com/michaelmgis/osmdata.xyz/issues/16) --> adding tents
 - 01.2021
