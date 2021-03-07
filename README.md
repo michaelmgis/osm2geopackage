@@ -35,6 +35,7 @@ Archive | old [workflows](https://github.com/michaelmgis/osmdata.xyz/tree/master
 - 03.2021
   - **BIG UPDATE** will be implemented in March - adressing [Issue #25](https://github.com/michaelmgis/osmdata.xyz/issues/25): Switching from imposm/PostgreSQL to gdal/ogr2ogr for processing. Data model stays the same.
   - Adding hstore field "other_tags" which contains all keys and tags who are related to the primary mapfeatues but not listed as main keys/tags.
+  - public_transport with relations included
 - 02.2021
   - adressing [Issue #16](https://github.com/michaelmgis/osmdata.xyz/issues/16) --> adding tents
 - 01.2021
