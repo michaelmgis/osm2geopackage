@@ -18,12 +18,13 @@ osmdata.xyz is my hobby and absolutely non-commercial. I'm happy to share open d
 ## Utilized tools to create extracts
 Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_scripts
 
-- imposm3 --> https://github.com/omniscale/imposm3 (see since 20190805)
-- PostGIS / PostgreSQL --> https://postgis.net/
 - osmium --> https://osmcode.org/osmium-tool/
 - gdal / ogr2ogr --> https://gdal.org/programs/ogr2ogr.html
 
-- osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql (used in former [workflows](https://github.com/michaelmgis/osmdata.xyz/tree/master/archive))
+Archive | old [workflows](https://github.com/michaelmgis/osmdata.xyz/tree/master/archive)
+- imposm3 --> https://github.com/omniscale/imposm3 (see since 20190805)
+- PostGIS / PostgreSQL --> https://postgis.net/
+- osm2pgsql --> https://wiki.openstreetmap.org/wiki/Osm2pgsql)
 
 ## Data basis
 - primary (map) features --> https://wiki.openstreetmap.org/wiki/Map_Features
@@ -32,7 +33,8 @@ Workflow: https://github.com/michaelmgis/osmdata.xyz/tree/master/workflow_script
 ## Recent improvements and changes
 
 - 03.2021
-  - BIG UPDATE  will be implemented in March - adressing [Issue #25](https://github.com/michaelmgis/osmdata.xyz/issues/25): Switching from imposm/PostgreSQL to gdal/ogr2ogr for processing. Data model stays the same.
+  - BIG UPDATE will be implemented in March - adressing [Issue #25](https://github.com/michaelmgis/osmdata.xyz/issues/25): Switching from imposm/PostgreSQL to gdal/ogr2ogr for processing. Data model stays the same.
+  - Adding hstore field "other_tags" which contains all keys and tags who are related to the primary mapfeatues but not listed as main keys/tags.
 - 02.2021
   - adressing [Issue #16](https://github.com/michaelmgis/osmdata.xyz/issues/16) --> adding tents
 - 01.2021
