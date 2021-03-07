@@ -11,7 +11,7 @@ In a monthly cycle new extracts are provided. The first Planet Dump of each mont
 Projection of the geodata: WGS 84 | EPSG 4326 | https://spatialreference.org/ref/epsg/4326/
 
 ## Why
-OpenStreetMap (OSM) offers an amazing collection of data. The information contained provides many possibilities to better understand the whole world, e.g. with the use of a geographic information system (GIS). There are many tools to create small extracts from the OSM data: overpass-turbo (API) or other tools in QGIS/ArcGIS. A bigger challenge is the creation of ready to use GIS-compatible data sets from OSM, which cover whole countries, continents or even the whole world.
+OpenStreetMap (OSM) offers an amazing collection of data. The information contained provides many possibilities to better understand the whole world, e.g. with the use of a geographic information system (GIS). There are many tools to create small extracts from OSM data: overpass-turbo (API) or other tools in QGIS/ArcGIS. A bigger challenge is creating ready to use GIS-compatible data sets from OSM, which cover whole countries, continents or even the whole world.
 
 osmdata.xyz is my hobby and absolutely non-commercial. I'm happy to share open data, knowledge and insights.
 
