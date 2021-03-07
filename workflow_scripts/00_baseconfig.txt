@@ -1,0 +1,13 @@
+#installation of needed packages
+apt-get update && apt-get install -y aptitude && aptitude update && aptitude install -y nano axel wput iotop screen p7zip-full htop vnstat gdal-bin osmium-tool
+
+#getting the newest planet file.
+screen -S osmget axel -n 5 -a -v https://ftp.fau.de/osm-planet/pbf/planet-latest.osm.pbf
+
+#getting the gdal ini files
+wget https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/workflow_scripts/osmconf_public_transport.ini
+chmod 777 osmconf_public_transport.ini
+wget https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/workflow_scripts/osmconf_address.ini
+chmod 777 osmconf_address.ini
+wget https://raw.githubusercontent.com/michaelmgis/osmdata.xyz/master/workflow_scripts/osmconf_all.ini
+chmod 777 osmconf_all.ini
