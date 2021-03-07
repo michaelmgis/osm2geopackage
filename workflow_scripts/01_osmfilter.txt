@@ -1,0 +1,31 @@
+#filter the particular keys and tags for each primary map feature and creating a dedicted PBF. This speedup the overall process.
+osmium tags-filter planet-latest.osm.pbf nwr/building -o planet-latest_building.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/highway -o planet-latest_highway.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/aerialway -o planet-latest_aerialway.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/aeroway -o planet-latest_aeroway.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/amenity -o planet-latest_amenity.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/barrier -o planet-latest_barrier.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/boundary -o planet-latest_boundary.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/craft -o planet-latest_craft.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/emergency -o planet-latest_emergency.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/geological -o planet-latest_geological.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/historic -o planet-latest_historic.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/leisure -o planet-latest_leisure.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/landuse -o planet-latest_landuse.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/man_made -o planet-latest_man_made.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/military -o planet-latest_military.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/natural -o planet-latest_natural.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/office -o planet-latest_office.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/place -o planet-latest_place.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/power -o planet-latest_power.osm.pbf
+osmium tags-filter planet-latest.osm.pbf highway=bus_stop nwr/public_transport=platform nwr/bus=yes nwr/public_transport=platform nwr/highway=bus_stop nwr/amenity=bus_station nwr/public_transport=station nwr/bus=yes nwr/public_transport=station nwr/type=route nwr/route=bus nwr/route=trolleybus nwr/type=route_master nwr/route_master=bus nwr/route_master=trolleybus nwr/operator nwr/network nwr/busway nwr/lanes:psv nwr/bus:lanes nwr/bus_bay nwr/ref nwr/local_ref nwr/operator. shelter nwr/covered nwr/uic_ref nwr/uic_name nwr/departures_board nwr/bench nwr/bin nwr/tactile_paving nwr/layer nwr/lit nwr/surface nwr/wheelchair nwr/bicycle nwr/official_name nwr/public_transport:version nwr/operator nwr/opening_hours nwr/interval nwr/duration nwr/fee nwr/from nwr/to nwr/via nwr/colour nwr/roundtrip nwr/internet_access nwr/air_conditioning nwr/railway nwr/electrified nwr/usage nwr/service nwr/gauge nwr/bridge nwr/tunnel nwr/layer nwr/operator nwr/embankment nwr/cutting nwr/passenger nwr/amenity=ferry_terminal nwr/route=bus nwr/route=trolleybus nwr/route=minibus nwr/route=share_taxi nwr/route=train nwr/route=light_rail nwr/route=subway nwr/route=tram nwr/route=monorail nwr/route=ferry -o planet-latest_public_transport.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/railway -o planet-latest_railway.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/route -o planet-latest_route.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/shop -o planet-latest_shop.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/sport -o planet-latest_sport.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/telecom -o planet-latest_telecom.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/tourism -o planet-latest_tourism.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/waterway -o planet-latest_waterway.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/addr nwr/addr:housenumber nwr/addr:housename nwr/addr:flats nwr/addr:conscriptionnumber nwr/addr:street nwr/addr:place nwr/addr:postcode nwr/addr:city nwr/addr:country nwr/addr:full nwr/addr:hamlet nwr/addr:suburb nwr/addr:subdistrict nwr/addr:district nwr/addr:province nwr/addr:state nwr/addr:interpolation nwr/addr:inclusion nwr/addr:door nwr/addr:unit nwr/addr:floor nwr/addr:block -o planet-latest_address.osm.pbf
+osmium tags-filter planet-latest.osm.pbf nwr/water -o planet-latest_water.osm.pbf
+rm planet-latest.osm.pbf
