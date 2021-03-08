@@ -1,7 +1,7 @@
 # Readme
 The files are supposed to run on docker. build, run and exec
 
-This workflow refers to the old scripts before march 2021. See archive: (https://github.com/michaelmgis/osmdata.xyz/tree/master/archive/Version_2_imposm)[https://github.com/michaelmgis/osmdata.xyz/tree/master/archive/Version_2_imposm]
+This workflow refers to the old scripts before march 2021. See archive: [https://github.com/michaelmgis/osmdata.xyz/tree/master/archive/Version_2_imposm](https://github.com/michaelmgis/osmdata.xyz/tree/master/archive/Version_2_imposm)
 
 ## building the docker container:
 
